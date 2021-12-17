@@ -15,7 +15,7 @@
     <view class="items">
         <view class="item" tt:for="{{items}}" bind:tap="open" data-page="/pages/posts/single?id={{item.ID}}">
             <text class="title {{item.post_images.length == 0 ? 'full-title' : ''}}">{{item.post_title}}</text>
-            <image class="figure" mode="widthFix" s-if="item.post_images.length > 0" src="{{strings.absurl(item.post_images[0])}}/300:200" webp alt="{{item.post_title}}"></image>
+            <image class="figure" mode="widthFix" tt:if="{{item.post_images.length > 0}}" src="{{strings.absurl(item.post_images[0])}}/300:200" webp alt="{{item.post_title}}"></image>
             <text class="meta">{{strings.formatDate('Y年m月d日', item.post_date)}} {{item.views}}次阅读</text>
         </view>
     </view>

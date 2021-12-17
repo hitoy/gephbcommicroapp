@@ -62,6 +62,10 @@ Page({
                 related_products: result.post_related_product,
                 related_projects: result.post_related_project
             });
+
+            tt.setNavigationBarTitle({
+                title: result.post_title,
+            });
         });
     },
     onShareAppMessage() {

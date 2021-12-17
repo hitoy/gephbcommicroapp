@@ -13,7 +13,9 @@
     bottom: 0;
     width: 100%;
     padding-left: 10px;
+    padding-bottom: 15px;
     line-height: 40px;
+    text-align: center;
     color: #fff;
     background: rgba(0,0,0,.6);
 }
@@ -75,5 +77,5 @@
     justify-content: center;
     place-items: center;
     text-align: center;
-    padding: 5rpx;
+    padding: 3px;
 }

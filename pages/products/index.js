@@ -184,6 +184,10 @@ Page({
                 content: result.content
             });
         });
+
+        tt.setNavigationBarTitle({
+                title: result.title,
+            });
     },
 
     onShareAppMessage() {

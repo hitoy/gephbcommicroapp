@@ -42,7 +42,7 @@
     color: #fff;
 }
 .primary-banner video ~.slider-content .description {
-    font-size: 1.4em;
+    font-size: 24px;
     font-weight: 600;
 }
 .business {
@@ -55,7 +55,7 @@
 .business .item {
     position: relative;
     padding-top: 58%;
-    font-size: 1.2em;
+    font-size: 18px;
     font-weight: 600;
     color: #fff;
     background-repeat: no-rpeat;
@@ -227,8 +227,11 @@
 }
 .posts .title {
     float: left;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    overflow: hidden; 
     width: 63%;
-    margin-bottom: 10px;
 }
 .posts .full-title {
     width: 100%;

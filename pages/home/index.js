@@ -182,6 +182,10 @@ Page({
                 images: images,
                 releaseDate: result.pubdate
             });
+
+            tt.setNavigationBarTitle({
+                title: result.title,
+            });
         });
     },
 

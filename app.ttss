@@ -29,10 +29,16 @@ page {
 image, video {
     max-width: 100%;
 }
+rich-text {
+    user-select: text;
+    -webkit-user-select: text;
+}
 .primary-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--primary-text-color);
+    user-select: text;
+    -webkit-user-select: text;
 }
 .secondary-title {
     font-size: 20px;
@@ -49,7 +55,7 @@ image, video {
 }
 .entry-content {
     display: block;
-    margin-top: 30rpx;
+    margin-top: 15px;
     font-size: 1em;
     line-height: 1.6;
     color: var(--secondary-text-color);

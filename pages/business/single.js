@@ -94,6 +94,10 @@ Page({
                     });
                 });
             }
+
+            tt.setNavigationBarTitle({
+                title: result.post_title,
+            });
         });
     },
 

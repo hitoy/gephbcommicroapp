@@ -29,7 +29,7 @@
     padding: 10px;
 }
 .section-projects .title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -55,7 +55,7 @@
     font-size: 16px;
 }
 .section-projects .item.big .desc {
-    font-size: 14px;
+    font-size: 13px;
 }
 .loading {
     padding: 15px 0;

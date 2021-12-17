@@ -28,7 +28,7 @@
     line-height: 1.5;
 }
 .applications {
-    margin: 20px 0 40px 0;
+    margin: 20px 0;
     white-space: nowrap;
 }
 .applications .item {

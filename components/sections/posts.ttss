@@ -27,8 +27,11 @@
 .section-posts .title {
     float: left;
     width: 63%;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3; 
+    overflow: hidden; 
     font-size: 16px;
-    margin-bottom: 10px;
 }
 .section-posts .full-title {
     width: 100%;

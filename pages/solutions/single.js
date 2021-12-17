@@ -73,6 +73,10 @@ Page({
                 related_projects: result.post_related_project,
                 related_posts: result.post_related_article
             });
+
+            tt.setNavigationBarTitle({
+                title: result.post_title,
+            });
         });
     },
 

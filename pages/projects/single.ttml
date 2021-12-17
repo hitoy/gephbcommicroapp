@@ -7,7 +7,7 @@
 </swiper>
 
 <view class="overview">
-    <view class="headline">{{subtitle}}</view>
+    <view class="primary-title">{{subtitle}}</view>
     <view class="summary">
         <text>客户：{{client}}</text>
         <text>物料：{{material}}</text>
@@ -21,10 +21,10 @@
 </view>
 
 <view class="body">
-    <view class="subheadline">项目概况</view>
+    <view class="secondary-title">项目概况</view>
     <rich-text class="entry-content" nodes="{{strings.formatHtml(content)}}" selectable="true" image-menu-prevent="true"></rich-text>
 
-    <view class="subheadline">客户评价</view>
+    <view class="secondary-title">客户评价</view>
     <rich-text class="entry-content" nodes="{{strings.formatHtml(review)}}" selectable="true" image-menu-prevent="true"></rich-text>
 </view>
 

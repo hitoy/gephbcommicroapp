@@ -73,6 +73,10 @@ Page({
                 related_videos: result.post_related_video,
                 related_posts: result.post_related_article
             });
+
+            tt.setNavigationBarTitle({
+                title: result.post_title,
+            });
         });
     },
 

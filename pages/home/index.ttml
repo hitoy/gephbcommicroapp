@@ -104,14 +104,14 @@
         <block tt:if="{{currentTab == 'news' || currentTab == 'infos'}}">
         <view class="item" tt:for="{{items[currentTab]}}" bind:tap="open" data-page="/pages/posts/single?id={{item.ID}}">
             <text class="title {{item.post_images.length == 0 ? 'full-title' : ''}}">{{item.post_subtitle}}</text>
-            <image class="figure" mode="widthFix" tt:if="item.post_images.length > 0" src="{{strings.absurl(item.post_images[0])}}/300:180" alt="{{item.post_subtitle}}"></image>
+            <image class="figure" mode="widthFix" tt:if="{{item.post_images.length > 0}}" src="{{strings.absurl(item.post_images[0])}}/300:180" alt="{{item.post_subtitle}}"></image>
             <text class="meta">{{strings.formatDate('m月d日', item.post_date)}} {{item.views}}次阅读</text>
         </view>
         </block>
         <block tt:if="{{currentTab == 'posts'}}">
         <view class="item" tt:for="{{items[currentTab]}}" bind:tap="open" data-page="/pages/posts/single?id={{item.ID}}">
             <text class="title {{item.post_images.length == 0 ? 'full-title' : ''}}">{{item.post_subtitle}}</text>
-            <image class="figure" mode="widthFix" tt:if="item.post_images.length > 0" src="{{strings.absurl(item.post_images[0])}}/300:180" alt="{{item.post_subtitle}}"></image>
+            <image class="figure" mode="widthFix" tt:if="{{item.post_images.length > 0}}" src="{{strings.absurl(item.post_images[0])}}/300:180" alt="{{item.post_subtitle}}"></image>
             <text class="meta">{{item.post_author}} {{item.views}}次阅读</text>
         </view>
         </block>
