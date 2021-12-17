@@ -1,0 +1,79 @@
+.head {
+    width: 100%;
+    height: 220px;
+}
+.head .item {
+    position: relative;
+}
+.head .image {
+    width: 100%;
+}
+.head .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 10px;
+    line-height: 40px;
+    color: #fff;
+    background: rgba(0,0,0,.6);
+}
+.body {
+    box-sizing: border-box;
+    padding: 30px 10px 20px 10px;
+    background: var(--primary-bg-color);
+}
+.body .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.body .item {
+    width: calc(50% - 5px);
+    margin-top: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 14px;
+}
+.body .title {
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.body image {
+    width: 100%;
+    height: 100px;
+}
+.materials {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    background: var(--primary-bg-color);
+}
+.materials .items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+.materials .item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    background: var(--secondary-bg-color);
+}
+.materials text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    padding: 5rpx;
+}

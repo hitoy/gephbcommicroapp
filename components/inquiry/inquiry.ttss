@@ -1,0 +1,59 @@
+.inquiry {
+    position: sticky;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    background: #fff;
+    box-shadow: 0 -1px 3px #f0f0f0;
+}
+.inquiry .item {
+    position: static !important;
+    display: inline-flex;
+    justify-content: space-around;
+    place-items: center;
+    box-sizing: border-box;
+    width: auto !important;
+    height: 35px !important;
+    padding: 0 10rpx 0 0!important;
+    margin: 10rpx 0!important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: .95rem !important;
+    line-height: 100% !important;
+    font-size: .8rem !important;
+    text-align: center;
+    background: #fff;
+}
+.inquiry .item:after {
+    border: none;
+}
+.inquiry .message {
+    padding: 0 30rpx 0 10rpx !important;
+    border: 2px solid #bae212 !important;
+}
+.inquiry .call {
+    padding: 0 30rpx 0 10rpx !important;
+    background: #bae212 !important;
+}
+.inquiry .icon {
+    width: 50px;
+    height: 50px;
+    transform: scale(.4);
+    background: var(--icons) no-repeat 0 0;
+    margin-right: -6px;
+}
+.inquiry .chat .icon {
+   background-position: -360px -60px; 
+}
+.inquiry .message .icon {
+   background-position: 0 0; 
+}
+.inquiry .call .icon {
+   background-position: -420px -60px; 
+}

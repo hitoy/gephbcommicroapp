@@ -1,0 +1,26 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<swiper class="head" indicator-dots="true" indicator-color="rgba(240,240,240,1)" indicator-active-color="rgba(186,226,18,1)" autoplay="true">
+    <swiper-item class="item" tt:for="{{solutions}}" bind:tap="open" data-page="/pages/solutions/single?id={{item.ID}}">
+        <image class="image" mode="aspectFill" src="{{strings.absurl(item.post_primaryimage)}}/500" webp alt="{{item.post_subtitle}}"></image>
+        <view class="content">{{item.post_subtitle}}</view>
+    </swiper-item>
+</swiper>
+
+<view class="body">
+    <view class="secondary-title">客户案例</view>
+    <view class="items">
+        <view class="item" tt:for="{{items}}" bind:tap="open" data-page="/pages/projects/single?id={{item.ID}}">
+            <image class="figure" mode="aspectFill" src="{{strings.absurl(item.post_images[0])}}/320" webp alt="{{item.post_subtitle}}"></image>
+            <view class="content">
+                <view class="title">{{item.post_subtitle}}</view>
+                <view class="desc">
+                    <text>物料：{{item.post_material}}</text>
+                    <text>应用：{{item.post_application}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="loadmore" tt:if="{{complete}}">全部案例加载完成</view>
+<view class="loadmore" tt:else>加载中...</view>

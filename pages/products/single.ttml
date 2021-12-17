@@ -1,0 +1,64 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="head" tt:if="{{subtitle}}">
+    <view class="figure">
+        <image class="thumbnail" mode="widthFix" src="{{strings.absurl(thumbnail)}}" alt="{{subtitle}}"></image>
+    </view>
+    <view class="summary">
+        <view class="primary-title">{{subtitle}}</view>
+        <rich-text class="entry-content" nodes="{{strings.formatHtml(excerpt)}}"></rich-text>
+    </view>
+    <block tt:if="{{technical}}">
+        <rich-text class="technical" nodes="{{strings.formatHtml(technical)}}"></rich-text>
+    </block>
+</view>
+<view class="loading" tt:else>
+    <text></text><text></text><text></text><text></text><text></text>
+</view>
+
+<view class="interactive">
+    <interactive objectid="{{id}}" objecttitle="{{subtitle}}" objectimageUrl="{{strings.absurl(thumbnail)}}"></interactive>
+</view>
+
+<view class="section introduction" tt:if="{{summary}}">
+    <view class="secondary-title">产品简介</view>
+    <rich-text class="entry-content" nodes="{{strings.formatHtml(summary)}}"></rich-text>
+
+    <video tt:if="{{have_video}}" class="video" objectFit="fill" src="{{strings.absurl(video_url)}}" controls poster="{{strings.absurl(video_cover)}}"></video>
+    <image tt:elif="{{video_url}}" class="video" mode="widthFix" src="{{strings.absurl(video_url)}}"></image>
+</view>
+<view class="loading" tt:else>
+    <text></text><text></text><text></text><text></text><text></text>
+</view>
+
+<block tt:if="{{gallery.length > 0}}">
+<view class="section gallery">
+    <view class="secondary-title">产品图集</view>
+    <view class="items">
+    <block tt:for="{{gallery}}">
+        <image tt:if="{{index <=3 }}" class="item" mode="widthFix" src="{{strings.absurl(item.url)}}/320" alt="{{item.title}}"></image>
+    </block>
+    </view>
+</view>
+</block>
+
+<block tt:if="{{advantages.length > 0}}">
+<view class="section advantages">
+    <view class="secondary-title">产品优势</view>
+    <view class="items">
+        <view class="item" tt:for="{{advantages}}">
+            <image class="figure" mode="widthFix" src="{{strings.absurl(item.url)}}" alt="{{item.title}}"></image>
+            <view class="content">
+                <text class="point">{{strings.strip_tags(item.title)}}</text>
+                <rich-text class="description" nodes="{{strings.formatHtml(item.description)}}" selectable="true" image-menu-prevent="true"></rich-text>
+            </view>
+        </view>
+    </view>
+</view>
+</block>
+
+<projects search="{{related_projects}}"></projects>
+
+<videos search="{{related_videos || keywords}}"></videos>
+
+<inquiry></inquiry>

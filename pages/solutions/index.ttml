@@ -1,0 +1,27 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<swiper class="head" indicator-dots="true" indicator-color="rgba(240,240,240,1)" indicator-active-color="rgba(186,226,18,1)" autoplay="true">
+    <swiper-item class="item" tt:for="{{projects}}" bind:tap="open" data-page="/pages/projects/single?id={{item.ID}}">
+        <image class="image" mode="aspectFill" src="{{strings.absurl(item.post_images[0])}}/500" alt="{{item.post_subtitle}}"></image>
+        <view class="content">{{item.post_subtitle}}</view>
+    </swiper-item>
+</swiper>
+
+<view class="body">
+    <view class="secondary-title">行业方案</view>
+    <view class="items">
+        <view class="item" tt:for="{{items}}" bind:tap="open" data-page="/pages/solutions/single?id={{item.ID}}">
+            <image mode="aspectFill" src="{{strings.absurl(item.post_primaryimage)}}/300" alt="{{item.post_subtitle}}"></image>
+            <view class="title">{{item.post_subtitle}}</view>
+        </view>
+    </view>
+</view>
+
+<view class="materials">
+    <view class="secondary-title">物料处置</view>
+    <view class="items">
+        <view class="item" tt:for="{{materials}}" bind:tap="open" data-page="/pages/materials/single?id={{item.ID}}">
+            <text>{{item.post_material}}</text>
+        </view>
+    </view>
+</view>

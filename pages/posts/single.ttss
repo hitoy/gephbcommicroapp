@@ -1,0 +1,44 @@
+.head {
+    padding: 30px 10px 10px 10px;
+    background: var(--primary-bg-color);
+}
+.headline {
+    font-weight: 600;
+}
+.meta {
+    display: flex;
+    justify-content: space-between;
+    place-items: baseline;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+}
+.author {
+    display: inline-block;
+}
+.avatar {
+    float: left;
+    width: 20px;
+    margin-right: 5px;
+}
+.date {
+    display: inline-block;
+    margin-left: 5px;
+}
+.views {
+    display: inline-block;
+    margin-left: 5px;
+}
+.followus {
+    margin: 0 !important;
+}
+.body {
+    padding: 0 10px;
+    background: var(--primary-bg-color);
+    overflow: hidden;
+}
+.interactive {
+    padding: 20px 0;
+    background: var(--primary-bg-color);
+}

@@ -1,0 +1,52 @@
+.video {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+.head {
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+    background: var(--primary-bg-color);
+}
+.slogan {
+    margin-top: 10px;
+    color: #999;
+}
+.interactive {
+    padding: 10px 0;
+    background: var(--primary-bg-color);
+}
+.body {
+    padding: 10px 10px;
+    background: var(--primary-bg-color);
+}
+.secondary-title {
+    margin-top: 10px;
+}
+.entry-content {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.applications {
+    margin: 20px 0 40px 0;
+    white-space: nowrap;
+}
+.applications .item {
+    display: inline-block;
+    width: 140rpx;
+    text-align: center;
+    vertical-align: top;
+    white-space: normal;
+}
+.applications .figure {
+    width: 120rpx;
+    height: 120rpx;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.applications .name {
+    display: block;
+    margin-top: 10rpx;
+    font-weight: 600;
+    font-size: 12px;
+}

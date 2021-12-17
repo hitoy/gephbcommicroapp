@@ -1,0 +1,53 @@
+.interactive {
+    width: 100%;
+    text-align: center;
+}
+.interactive .item  {
+    position: static !important;
+    display: inline-flex;
+    justify-content: space-around;
+    place-items: center;
+    box-sizing: border-box;
+    width: auto !important;
+    height: 80rpx !important;
+    padding: 0 30rpx 0 10rpx!important;
+    margin: 0 !important;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 10rpx !important;
+    font-size: .95em !important;
+    line-height: 100% !important;
+    text-align: center;
+    vertical-align: top;
+    background: #fff !important;
+    font-size: .6em;
+    font-weight: 400;
+    cursor: pointer;
+}
+.interactive .item.like {
+    margin-right: 10px !important;
+}
+.interactive .item:after {
+    border: none;
+}
+.interactive .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--icons) no-repeat 0 0;
+    transform: scale(.4);
+}
+.interactive .like {
+    margin-right: -8px;
+    background-position: -120px -60px;
+}
+.interactive .liked {
+    margin-right: -8px;
+    background-position: -120px -120px;
+}
+.interactive .share {
+    margin-right: -8px;
+    background-position: 0 -60px;
+}
+.interactive .contact {
+    margin-right: -8px;
+    background-position: -60px -60px;
+}

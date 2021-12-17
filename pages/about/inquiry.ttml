@@ -1,0 +1,26 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="head">
+    <view class="title">我们会尽快与您联系</view>
+    <view class="desc">请保持电话通畅</view>
+</view>
+<view class="body">
+    <form class="form" bindsubmit="submit">
+        <view class="input"><text class="text">联系人</text><input type="text" name="user_name" placeholder="如何称呼您*" confirm-type="doen" /></view>
+        <view class="input"><text class="text">电话号</text><input type="number" name="user_mobile" placeholder="手机号码*" confirm-type="doen" /></view>
+        <view class="input"><text class="text">公司名</text><input type="text" name="user_company" placeholder="您的公司名称" confirm-type="doen" /></view>
+        <view class="input"><text class="text">产品</text><input type="text" name="content" placeholder="产品名称和要求" confirm-type="doen" /></view>
+        <view class="input">
+            <text class="text">物料</text>
+            <checkbox-group bindchange="checkboxChange">
+                <label><checkbox value="工业垃圾">工业垃圾</checkbox></label>
+                <label> <checkbox value="建筑装修垃圾">建筑装修垃圾</checkbox></label>
+                 <label><checkbox value="农林废弃物">农林废弃物</checkbox></label>
+                 <label><checkbox value="生活垃圾">生活垃圾</checkbox></label>
+                 <label><checkbox value="其他">其他</checkbox></label>
+        </checkbox-group>
+        </view>
+        <view class="input"><button class="submit" formType="submit">提交</button></view>
+        <view class="notice">系统已加密，您的个人信息被严格保护。</view>
+    </form>
+</view>

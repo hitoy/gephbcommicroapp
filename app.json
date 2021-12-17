@@ -1,0 +1,65 @@
+{
+    "pages": [
+        "pages/home/index",
+        "pages/products/index",
+        "pages/products/single",
+        "pages/solutions/index",
+        "pages/solutions/single",
+        "pages/materials/single",
+        "pages/projects/index",
+        "pages/projects/single",
+        "pages/videos/single",
+        "pages/posts/single",
+        "pages/about/index",
+        "pages/about/inquiry",
+        "pages/business/single",
+        "pages/browse/index"
+    ],
+    "window": {
+        "navigationStyle": "default",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#151c30",
+        "navigationBarTitleText": "洁普环保设备",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#f0f0f0"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "text": "首页",
+                "iconPath": "/images/tabbar-home.png",
+                "selectedIconPath": "/images/tabbar-home-selected.png"
+            },
+            {
+                "pagePath": "pages/products/index",
+                "text": "产品",
+                "iconPath": "/images/tabbar-product.png",
+                "selectedIconPath": "/images/tabbar-product-selected.png"
+            },
+            {
+                "pagePath": "pages/solutions/index",
+                "text": "方案",
+                "iconPath": "/images/tabbar-solution.png",
+                "selectedIconPath": "/images/tabbar-solution-selected.png"
+            },
+            {
+                "pagePath": "pages/projects/index",
+                "text": "案例",
+                "iconPath": "/images/tabbar-project.png",
+                "selectedIconPath": "/images/tabbar-project-selected.png"
+            },
+            {
+                "pagePath": "pages/about/index",
+                "text": "关于",
+                "iconPath": "/images/tabbar-about.png",
+                "selectedIconPath": "/images/tabbar-about-selected.png"
+            }
+        ],
+        "color": "#333",
+        "selectedColor": "#bae212"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

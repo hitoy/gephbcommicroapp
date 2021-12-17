@@ -1,0 +1,31 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="head">
+    <video objectFit="cover" autoplay="true" loop="true" muted="true" show-fullscreen-btn="false" show-play-btn="false" controls="false" play-btn-position="bottom" src="{{strings.absurl(video)}}"></video>
+    <view class="slogan">{{strings.strip_tags(content)}}</view>
+</view>
+
+<view class="body">
+    <view class="tabs">
+        <view class="{{currentTab == 'shredders' ? 'active' : ''}}" data-tab="shredders" bind:tap="changetab">撕碎设备</view>
+        <view class="{{currentTab == 'crushers' ? 'active' : ''}}" data-tab="crushers" bind:tap="changetab">破碎设备</view>
+        <view class="{{currentTab == 'units' ? 'active' : ''}}" data-tab="units" bind:tap="changetab">成套设备</view>
+        <view class="{{currentTab == 'matchings' ? 'active' : ''}}" data-tab="matchings" bind:tap="changetab">配套设备</view>
+    </view>
+    <view class="items">
+        <block tt:if="{{items[currentTab].length > 0}}">
+        <view class="item" tt:for="{{items[currentTab]}}" bind:tap="open" data-page="/pages/products/single?id={{item.id}}">
+            <image class="figure" mode="widthFix" src="{{strings.absurl(item.thumbnail)}}/200:180" alt="{{item.title}}" webp></image>
+            <view class="content">
+                <view class="tertiary-title">{{item.title}}</view>
+                <text class="excerpt">{{strings.substr(item.excerpt,0,60)}} ...</text>
+            </view>
+        </view>
+        </block>
+        <block tt:else>
+        <view class="loading">
+            <text></text><text></text><text></text><text></text><text></text>
+        </view>
+        </block>
+    </view>
+</view>

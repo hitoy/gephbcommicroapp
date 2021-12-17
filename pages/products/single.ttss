@@ -1,0 +1,90 @@
+.head {
+    background: var(--primary-bg-color); 
+    overflow: hidden;
+}
+.head .figure {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    text-align: center;
+    background: url('https://www.gephb.com/dm-content/themes/gephb/images/index/gephb-product-center-mobile-bg.jpg') no-repeat top center;
+    background-size: cover;
+}
+.thumbnail {
+    position: absolute;
+    bottom: 10px;
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+}
+.summary {
+    padding: 0 10px;
+    margin-top: 20px;
+}
+.primary-title {
+    margin: 10px 0;
+}
+.technical {
+    display: flex;
+    border-top: 1px solid var(--secondary-bg-color);
+    border-bottom: 1px solid var(--secondary-bg-color);
+    margin: 10px 0;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.technical .node-p {
+    display: inline-block;
+    white-space: nowrap;
+}
+.technical .name {
+    margin-left: 10px;
+    color: #bae212;
+}
+.interactive {
+    padding: 10px 0;
+    background: var(--primary-bg-color); 
+}
+.section {
+    margin-top: 10px;
+}
+.secondary-title {
+    line-height: 40px;
+    border-bottom: 1px solid var(--secondary-bg-color);
+}
+.video {
+    width: 100%;
+    margin-top: 15px;
+}
+.gallery .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery .item {
+    width: calc(50% - 5px);
+    margin-top: 10px;
+}
+.advantages .item {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.advantages .figure {
+    width: 260rpx;
+}
+.advantages .content {
+    width: calc(100% - 280rpx);
+}
+.advantages .point {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+}
+.advantages .description {
+    display: block;
+    margin-top: 10px;
+    color: var(--secondary-text-color);
+}

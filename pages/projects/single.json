@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "客户案例",
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "interactive": "/components/interactive/interactive",
+        "inquiry": "/components/inquiry/inquiry",
+        "posts": "/components/sections/posts",
+        "products": "/components/sections/products",
+        "projects": "/components/sections/projects",
+        "videos": "/components/sections/videos"
+    }
+}

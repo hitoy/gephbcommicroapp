@@ -1,0 +1,16 @@
+<view class="interactive">
+    <view class="item like" bind:tap="like">
+        <view class="icon {{liked ? 'liked' : 'like'}}"></view>
+        <text>{{likes}}</text>
+    </view>
+    <button class="item share" open-type="share">
+        <view class="icon share"></view>
+        <text>分享 {{shares}}</text>
+    </button>
+    <!--
+    <button class="item" open-type="contact">
+        <view class="icon chat"></view>
+        <text>询价</text>
+    </button>
+    -->
+</view>

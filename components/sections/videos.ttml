@@ -1,0 +1,39 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="section-videos" tt:if="{{!requested}}">
+    <view class="headline">相关视频</view>
+    <view class="loading">
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+    </view>
+</view>
+<view class="section-videos" tt:elif="{{items && requested}}">
+    <view class="headline">相关视频</view>
+    <view class="items">
+    <block tt:for="{{items}}">
+        <view class="item big" tt:if="{{index == 0}}" bind:tap="open" data-page="/pages/videos/single?id={{item.ID}}">
+            <view class="video">
+                <image class="cover" mode="widthFix" src="{{strings.absurl(item.post_video_cover)}}/600" webp alt="{{item.post_subtitle}}"></image>
+                <view class="play"></view>
+                <view class="duration">{{strings.formatDuration(item.post_video_duration)}}</view>
+            </view>
+            <view class="content">
+                <view class="title">{{item.post_subtitle}}</view>
+                <view class="desc">{{strings.substr(item.post_excerpt, 0, 100)}}...</view>
+            </view>
+        </view>
+        <view class="item" tt:if="{{index > 0}}" bind:tap="open" data-page="/pages/videos/single?id={{item.ID}}">
+            <view class="video">
+                <image class="cover" mode="widthFix" src="{{strings.absurl(item.post_video_cover)}}/300" alt="{{item.post_subtitle}}"></image>
+                <view class="duration">{{strings.formatDuration(item.post_video_duration)}}</view>
+            </view>
+            <view class="content">
+                <view class="title">{{item.post_subtitle}}</view>
+            </view>
+        </view>
+    </block>
+    </view>
+</view>

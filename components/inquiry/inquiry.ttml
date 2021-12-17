@@ -1,0 +1,5 @@
+<view class="inquiry">
+    <button class="item chat" open-type="contact"><view class="icon"></view><view class="text">客服</view></button>
+    <button class="item message" bind:tap="message"><view class="icon"></view><view class="text">立即询价</view></button>
+    <button class="item call" bind:tap="call"><view class="icon"></view><view class="text">电话咨询</view></button>
+</view>

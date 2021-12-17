@@ -1,0 +1,33 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<video class="video" objectFit="cover" src="{{strings.absurl(video_url)}}" poster="{{strings.absurl(video_cover)}}" title="{{subtitle}}"></video>
+
+<view class="head">
+    <view class="primary-title">{{subtitle}}</view>
+    <view class="slogan">{{slogan}}</view>
+</view>
+
+<view class="interactive">
+    <interactive objectid="{{id}}" objecttitle="{{subtitle}}" objectimageUrl="{{strings.absurl(thumbnail)}}"></interactive>
+</view>
+
+<view class="body">
+    <view class="secondary-title">方案概述</view>
+    <rich-text class="entry-content" nodes="{{strings.formatHtml(overview)}}" ></rich-text>
+
+    <scroll-view class="applications" scroll-x>
+        <view class="item" tt:for="{{application}}">
+            <image class="figure" mode="widthFix" src="{{strings.absurl(item.url)}}" alt="{{item.title}}"></image>
+            <text class="name">{{item.title}}</text>
+        </view>
+    </scroll-view>
+
+    <view class="secondary-title">方案说明</view>
+    <rich-text class="entry-content" nodes="{{strings.formatHtml(content)}}"></rich-text>
+</view>
+
+<products search="{{related_products}}"></products>
+
+<projects search="{{related_projects}}"></projects>
+
+<inquiry></inquiry>

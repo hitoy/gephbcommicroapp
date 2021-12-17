@@ -1,0 +1,37 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<swiper class="gallery" indicator-dots="true" indicator-color="rgba(240,240,240,1)" indicator-active-color="rgba(186,226,18,1)" autoplay="true">
+    <swiper-item class="item" tt:for="{{gallery}}">
+        <image mode="aspectFill" src="{{strings.absurl(item.url)}}/600:600" alt="{{item.title}}"></image>
+    </swiper-item>
+</swiper>
+
+<view class="overview">
+    <view class="headline">{{subtitle}}</view>
+    <view class="summary">
+        <text>客户：{{client}}</text>
+        <text>物料：{{material}}</text>
+        <text>产量：{{capacity}}</text>
+        <text>应用：{{application}}</text>
+    </view>
+</view>
+
+<view class="interactive">
+    <interactive objectid="{{id}}" objecttitle="{{subtitle}}" objectimageUrl="{{strings.absurl(thumbnail)}}"></interactive>
+</view>
+
+<view class="body">
+    <view class="subheadline">项目概况</view>
+    <rich-text class="entry-content" nodes="{{strings.formatHtml(content)}}" selectable="true" image-menu-prevent="true"></rich-text>
+
+    <view class="subheadline">客户评价</view>
+    <rich-text class="entry-content" nodes="{{strings.formatHtml(review)}}" selectable="true" image-menu-prevent="true"></rich-text>
+</view>
+
+<projects search="{{related_projects}}"></projects>
+
+<products search="{{keywords || title}}"></products>
+
+<posts search="{{keywords || title}}"></posts>
+
+<inquiry></inquiry>

@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "行业解决方案",
+    "usingComponents": {
+        "interactive": "/components/interactive/interactive",
+        "inquiry": "/components/inquiry/inquiry",
+        "posts": "/components/sections/posts",
+        "products": "/components/sections/products",
+        "projects": "/components/sections/projects",
+        "videos": "/components/sections/videos"
+    }
+}

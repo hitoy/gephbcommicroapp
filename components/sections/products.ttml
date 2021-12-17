@@ -1,0 +1,24 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="section-products" tt:if="{{!requested}}">
+    <view class="headline">相关产品</view>
+    <view class="loading">
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text></text>
+    </view>
+</view>
+<view class="section-products" tt:elif="{{items && requested}}">
+    <view class="headline">相关产品</view>
+    <view class="items">
+        <view class="item" tt:for="{{items}}" bind:tap="open" data-page="/pages/products/single?id={{item.ID}}">
+            <image class="figure" mode="widthFix" src="{{strings.absurl(item.post_thumbnail)}}/200" webp alt="{{item.post_subtitle}}"></image>
+            <view class="content">
+                <view class="name">{{item.post_subtitle}}</view>
+                <view class="excerpt">{{strings.substr(item.post_excerpt, 0, 60)}}...</view>
+            </view>
+        </view>
+    </view>
+</view>

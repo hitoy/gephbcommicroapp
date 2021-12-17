@@ -1,0 +1,31 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="head" tt:if="{{banner}}" style="background-image:url('{{banner}}/600')">
+    <view class="primary-title">{{subtitle}}</view>
+    <view class="slogan">{{slogan}}</view>
+</view>
+<view class="head" tt:else="{{!banner}}">
+    <view class="primary-title">{{subtitle}}</view>
+    <view class="slogan">{{slogan}}</view>
+</view>
+
+<view class="body">
+    <block tt:if="{{solutions.length > 0}}">
+    <view class="item" tt:for="{{solutions}}" bind:tap="open" data-page="/pages/solutions/single?id={{item.ID}}">
+        <image mode="widthFix" src="{{strings.absurl(item.post_primaryimage)}}"></image>
+        <view class="secondary-title">{{item.post_subtitle}}</view>
+        <view class="description">{{strings.substr(item.post_excerpt, 0, 100)}}...</view>
+    </view>
+    </block>
+    <block tt:else>
+    <view class="loading">
+        <text></text><text></text><text></text><text></text><text></text>
+    </view>
+    </block>
+</view>
+
+<products search="{{related_products || keywords}}"></products>
+
+<projects search="{{related_projects || keywords}}"></projects>
+
+<inquiry></inquiry>

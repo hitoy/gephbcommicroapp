@@ -1,0 +1,38 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="head">
+    <view class="primary-title">{{title}}</view>
+    <view class="meta">
+        <view class="pubdate">
+            <view class="author"><image class="avatar" mode="widthFix" tt:if="{{author_avatar}}" src="{{strings.absurl(author_avatar)}}/30" alt="{{author}}"></image><text class="name">{{author}}</text></view>
+            <view class="date">{{strings.formatDate('m月d日', releaseDate)}}</view>
+            <view class="views">{{views}}次阅读</view>
+        </view>
+        <!--<view class="followus" bind:tap="follow">关注</view>-->
+    </view>
+</view>
+
+<view class="body">
+    <block tt:if="{{content}}">
+    <rich-text class="entry-content" if="content" nodes="{{strings.formatHtml(content)}}"></rich-text>
+    </block>
+    <block tt:else>
+    <view class="loading">
+        <text></text><text></text><text></text><text></text><text></text>
+    </view>
+    </block>
+</view>
+
+<view class="interactive">
+    <interactive objectid="{{id}}" objecttitle="{{subtitle}}" objectimageUrl="{{strings.absurl(thumbnail)}}"></interactive>
+</view>
+    
+<posts search="{{keywords || title}}" exclude="{{id}}"></posts>
+
+<products search="{{keywords || title}}"></products>
+
+<projects search="{{keywords || title}}"></projects>
+
+<videos search="{{keywords || title}}"></videos>
+
+<inquiry phone="{{author_tel}}"></inquiry>

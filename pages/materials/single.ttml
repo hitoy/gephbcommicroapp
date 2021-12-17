@@ -1,0 +1,39 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<block tt:if="{{video_url}}">
+    <video class="video" objectFit="cover" src="{{strings.absurl(video_url)}}" poster="{{strings.absurl(video_cover)}}"></video>
+</block>
+<block tt:else>
+    <image class="video" mode="widthFix" src="{{strings.absurl(video_cover)}}"></image>
+</block>
+
+<view class="head">
+    <view class="primary-title">{{subtitle}}</view>
+    <rich-text class="entry-content" nodes="{{strings.formatHtml(overview)}}" selectable="true" image-menu-prevent="true"></rich-text>
+</view>
+
+<view class="interactive">
+    <interactive objectid="{{id}}" objecttitle="{{subtitle}}" objectimageUrl="{{strings.absurl(thumbnail)}}"></interactive>
+</view>
+
+<view class="body">
+    <view class="secondary-title">工艺流程</view>
+     <rich-text class="entry-content" nodes="{{strings.formatHtml(content)}}" selectable="true" image-menu-prevent="true"></rich-text>
+    <scroll-view class="applications" scroll-x>
+        <view class="item" tt:for="{{application}}">
+            <image class="figure" mode="widthFix" src="{{strings.absurl(item.url)}}" alt="{{item.title}}"></image>
+            <text class="name">{{item.title}}</text>
+        </view>
+    </scroll-view>
+    <view class="flowchart" tt:if="{{flowchart}}">
+        <image mode="widthFix" src="{{strings.absurl(flowchart)}}" lazy-load></image>
+    </view>
+</view>
+
+<products search="{{related_products || keywords}}"></products>
+
+<projects search="{{related_projects || keywords}}"></projects>
+
+<posts search="{{related_posts || keywords}}"></posts>
+
+<inquiry></inquiry>

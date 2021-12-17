@@ -1,0 +1,115 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="head">
+    <view class="company">
+        <view class="logo"></view>
+        <view class="content">
+            <view class="name">洁普智能环保</view>
+            <view class="slogan">智能固废破碎设备及整体解决方案供应商</view>
+        </view>
+    </view>
+</view>
+
+<view class="contact">
+    <view class="item tel">
+        <view class="content">0371-56177311</view>
+        <view class="text">咨询热线</view>
+        <view class="action" bind:tap="call" data-number="037156177311"></view>
+    </view>
+    <view class="item mobile">
+        <view class="content">15838176062<text>(同微信)</text></view>
+        <view class="text">即时通信</view>
+        <view class="action" bind:tap="call" data-number="15838176062"></view>
+    </view>
+    <view class="item email">
+        <view class="content">sales@gepecotech.com</view>
+        <view class="text">电子邮件</view>
+    </view>
+    <view class="item address">
+        <view class="content">郑州高新区长椿路23号</view>
+        <view class="text">办公地址</view>
+    </view>
+</view>
+
+<view class="about">
+    <text class="headline">智能固废破碎设备
+    及整线系统解决方案供应商</text>
+    <text class="content">洁普智能环保，是一家专注于智能、环保技术和固废破碎设备的研发、生产、销售和服务的国家高新技术企业，始终致力于绿色科技的持续发展和固体废物的再生利用。</text>
+</view>
+
+<view class="about-num">
+    <view class="item">
+        <view class="key"><text class="number">10</text>年</view>
+        <text>匠心智造 品质如一</text>
+        <view class="icon"></view>
+    </view>
+    <view class="item">
+        <view class="key"><text class="number">320</text>+</view>
+        <text>全球成功案例</text>
+        <view class="icon"></view>
+    </view>
+    <view class="item">
+        <view class="key"><text class="number">35000</text>平方</view>
+        <text>智能环保装备制造基地</text>
+        <view class="icon"></view>
+    </view>
+    <view class="item">
+        <view class="key"><text class="number">100</text>+</view>
+        <text>国家专利和企业荣誉</text>
+        <view class="icon"></view>
+    </view>
+</view>
+
+<view class="about-factory">
+    <view class="secondary-title">生产基地</view>
+    <view class="content">高效智能环保装备制造基地总占地面积100亩，总建筑面积35000平方米，是集办公、生产、研发为一体的综合性园区，可实现年产400台（套）高效智能环保装备，拥有数控车床、数控立式加工中心、数控龙门加工中心、数控磨床、数控线切割等加工设备数十套，可独立完成所有核心零部件的生产加工。</view>
+    <view class="content">
+    该生产基地拥有完善的企业计算机网络和通信网络，可实现产品设计、行政管理与生产过程的网络化、智能化和信息化，包括建立办公自动化（OA）和客户关系管理（CRM）的信息管理系统，以CAD/CAPP/CAM为主的工程设计/工艺/制造系统，智能监控系统等，为传统的制造业注入信息化的血液，提高整个企业的管理水平和创新能力。
+    </view>
+    <view class="images"></view>
+</view>
+
+<view class="about-partners">
+    <view class="secondary-title">合作伙伴</view>
+    <view class="items">
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-zoomlion.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-grandblue.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-cpep.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-guangda.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-schneider.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-siemens.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-cep.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-sauer.gif" alt="合作伙伴"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/partners/about-partner-bosch.gif" alt="合作伙伴"></image>
+    </view>
+</view>
+
+<view class="about-culture">
+    <view class="headline">品牌文化是行稳致远的企业之魂</view>
+    <view class="item">
+        <view class="title">愿景</view>
+        <view>铸造国际品牌</view><view>成为受人尊敬的环保企业</view>
+    </view>
+    <view class="item">
+        <view class="title">使命</view>
+        <view>以资源循环利用为己任，</view><view>致力绿色科技，实现人与自然和谐共生</view>
+    </view>
+    <view class="item">
+        <view class="title">价值观</view>
+        <view>诚信友善  热情高效</view><view>合作共赢  感恩共享</view>
+    </view>
+</view>
+
+<view class="about-honors">
+    <view class="secondary-title">荣誉资质</view>
+    <view class="items">
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry01.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry02.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry03.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry04.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry05.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry06.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry07.jpg" alt="荣誉资质"></image>
+        <image class="item" mode="widthFix" src="https://www.gephb.com/dm-content/themes/gephb/images/certificates/honor-ry08.jpg" alt="荣誉资质"></image>
+    </view>
+</view>

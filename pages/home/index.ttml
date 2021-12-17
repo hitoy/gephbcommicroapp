@@ -1,0 +1,132 @@
+<sjs src="../../utils/strings.sjs" module="strings" />
+
+<view class="primary-head">
+    <view class="logo"></view>
+    <swiper class="primary-banner" indicator-dots="true" indicator-color="rgba(240,240,240,1)" indicator-active-color="rgba(186,226,18,1)" autoplay>
+    <block tt:for="{{banners}}">
+        <swiper-item tt:if="{{item.type == 'image'}}" class="item" data-href="{{strings.absurl(item.link)}}" bind:tap="open">
+            <image mode="scaleToFill" src="{{strings.absurl(item.url)}}"></image>
+             <view class="slider-content">
+                <text class="primary-title">{{item.title}}</text>
+                <text class="description">{{item.description}}</text>
+            </view>
+        </swiper-item>
+        <swiper-item tt:if="{{item.type == 'video'}}" class="item" data-href="{{strings.absurl(item.link)}}">
+            <video objectFit="cover" autoplay="true" loop="true" muted="true" show-fullscreen-btn="false" show-play-btn="false" controls="false" lay-btn-position="bottom" src="{{strings.absurl(item.url)}}"></video>
+
+            <view class="slider-content">
+                <text class="description">{{item.description}}</text>
+            </view>
+        </swiper-item>
+    </block>
+    </swiper>
+</view>
+
+<view class="business">
+    <view class="item" data-page="/pages/business/single?id=23" bind:tap="open">
+        <text class="headline">生活垃圾处置</text>
+    </view>
+    <view class="item" data-page="/pages/business/single?id=24" bind:tap="open">
+        <text class="headline">工业垃圾处置</text>
+    </view>
+    <view class="item" data-page="/pages/business/single?id=25" bind:tap="open">
+        <text class="headline">农林废弃物处置</text>
+    </view>
+    <view class="item" data-page="/pages/business/single?id=26" bind:tap="open">
+        <text class="headline">建筑装修垃圾处置</text>
+    </view>
+</view>
+
+<view class="products">
+    <view class="head">
+        <text class="secondary-title">核心产品</text>
+        <view class="more" bind:tap="opentab" data-href="/pages/products/index">更多</view>
+    </view>
+    <scroll-view class="items" scroll-x>
+        <view class="item" bind:tap="open" data-page="/pages/products/single?id=21">
+            <image mode="aspectFit" src="https://www.gephb.com/dm-content/themes/gephb/images/index/product-2shaft-mobile.png" alt="双轴剪切式破碎机"></image>
+            <text>双轴剪切式破碎机</text>
+        </view>
+        <view class="item" bind:tap="open" data-page="/pages/products/single?id=22">
+            <image mode="aspectFit" src="https://www.gephb.com/dm-content/themes/gephb/images/index/product-fineshredder-mobile.png" alt="细破碎机"></image>
+            <text>细破碎机</text>
+        </view>
+        <view class="item" bind:tap="open" data-page="/pages/products/single?id=50">
+            <image mode="aspectFit" src="https://www.gephb.com/dm-content/themes/gephb/images/index/product-coarseshredder-mobile.png" alt="粗破碎机"></image>
+            <text>粗破碎机</text>
+        </view>
+        <view class="item" bind:tap="open" data-page="/pages/products/single?id=51">
+            <image mode="aspectFit" src="https://www.gephb.com/dm-content/themes/gephb/images/index/product-4shaft-mobile.png" alt="四轴破碎机"></image>
+            <text>四轴破碎机</text>
+        </view>
+        <view class="item" bind:tap="open" data-page="/pages/products/single?id=54">
+            <image mode="aspectFit" src="https://www.gephb.com/dm-content/themes/gephb/images/index/product-crusher-mobile.png" alt="破碎机"></image>
+            <text>颚式破碎机</text>
+        </view>
+        <view class="item" bind:tap="open" data-page="/pages/products/single?id=58">
+            <image mode="aspectFit" src="https://www.gephb.com/dm-content/themes/gephb/images/index/product-unit-mobile.png" alt="成套设备"></image>
+            <text>移动破碎站</text>
+        </view>
+    </scroll-view>
+</view>
+
+<view class="solutions">
+    <view class="secondary-title">解决方案</view>
+    <view class="items">
+        <view class="item" tt:for="{{solutions}}" bind:tap="open" data-page="/pages/solutions/single?id={{item.ID}}">{{item.post_subtitle}}</view>
+    </view>
+</view>
+
+<view class="projects">
+    <view class="head">
+        <text class="secondary-title">精品案例</text>
+        <view class="more" bind:tap="opentab" data-href="/pages/projects/index">更多</view>
+    </view>
+    <view class="items">
+        <view class="item" tt:for="{{projects}}" bind:tap="open" data-page="/pages/projects/single?id={{item.ID}}">
+            <image class="figure" mode="aspectFill" src="{{strings.absurl(item.post_thumbnail)}}/320:200" alt="{{item.post_subtitle}}"></image>
+            <view class="content">
+                <view class="title">{{item.post_subtitle}}</view>
+                <view class="application">{{item.post_application}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="posts">
+    <view class="tabs">
+        <view class="{{currentTab == 'news' ? 'active' : ''}}" data-tab="news" bind:tap="changetab">公司新闻</view>
+        <view class="{{currentTab == 'infos' ? 'active' : ''}}" data-tab="infos" bind:tap="changetab">行业资讯</view>
+        <view class="{{currentTab == 'posts' ? 'active' : ''}}" data-tab="posts" bind:tap="changetab">技术百科</view>
+        <view class="{{currentTab == 'videos' ? 'active' : ''}}" data-tab="videos" bind:tap="changetab">视频中心</view>
+    </view>
+    <view class="items">
+        <block tt:if="{{currentTab == 'news' || currentTab == 'infos'}}">
+        <view class="item" tt:for="{{items[currentTab]}}" bind:tap="open" data-page="/pages/posts/single?id={{item.ID}}">
+            <text class="title {{item.post_images.length == 0 ? 'full-title' : ''}}">{{item.post_subtitle}}</text>
+            <image class="figure" mode="widthFix" tt:if="item.post_images.length > 0" src="{{strings.absurl(item.post_images[0])}}/300:180" alt="{{item.post_subtitle}}"></image>
+            <text class="meta">{{strings.formatDate('m月d日', item.post_date)}} {{item.views}}次阅读</text>
+        </view>
+        </block>
+        <block tt:if="{{currentTab == 'posts'}}">
+        <view class="item" tt:for="{{items[currentTab]}}" bind:tap="open" data-page="/pages/posts/single?id={{item.ID}}">
+            <text class="title {{item.post_images.length == 0 ? 'full-title' : ''}}">{{item.post_subtitle}}</text>
+            <image class="figure" mode="widthFix" tt:if="item.post_images.length > 0" src="{{strings.absurl(item.post_images[0])}}/300:180" alt="{{item.post_subtitle}}"></image>
+            <text class="meta">{{item.post_author}} {{item.views}}次阅读</text>
+        </view>
+        </block>
+        <block tt:if="{{currentTab == 'videos'}}">
+        <view class="item video" tt:for="{{items[currentTab]}}" bind:tap="open" data-page="/pages/videos/single?id={{item.ID}}">
+            <text class="title {{item.post_images.length == 0 ? 'full-title' : ''}}">{{item.post_subtitle}}</text>
+            <view class="figure">
+                <image class="cover" mode="widthFix" src="{{strings.absurl(item.post_video_cover)}}/300:180" alt="{{item.post_subtitle}}"></image>
+                <view class="duration">{{strings.formatDuration(item.post_video_duration)}}</view>
+            </view>
+            <text class="meta">{{strings.formatDate('m月d日', item.post_date)}} {{item.views}}次阅读</text>
+        </view>
+        </block>
+    </view>
+</view>
+
+<view class="loadmore" tt:if="!complete">加载中...</view>
+<view class="loadmore" tt:else>没有啦</view>
