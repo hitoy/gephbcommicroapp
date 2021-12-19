@@ -128,5 +128,5 @@
     </view>
 </view>
 
-<view class="loadmore" tt:if="!complete">加载中...</view>
+<view class="loadmore" tt:if="{{!complete}}">加载中...</view>
 <view class="loadmore" tt:else>没有啦</view>
