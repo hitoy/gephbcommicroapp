@@ -13,7 +13,16 @@ Page({
     call(e) {
         let number = e.currentTarget.dataset.number;
         tt.makePhoneCall({
-            phoneNumber: number
+            phoneNumber: number,
+            success: function(){
+                tt.sendtoTAQ({
+                    event_type: 'phone',
+                    extra: {
+                        assets_id: '1716815542574091',
+                        page: '/pages/about/index'
+                    },
+                });
+            }
         });
     },
 
@@ -31,7 +40,8 @@ Page({
         return {
             title: _this.data.title,
             desc: _this.data.description,
-            path: '/pages/about/index?ref=share'
+            path: '/pages/about/index?ref=share',
+            templateId: 'h3cc879h25gb8d7815'
         };
     }
 });

@@ -196,7 +196,8 @@ Page({
             title: _this.data.title,
             desc: _this.data.description,
             imageUrl: _this.data.items[_this.data.currentTab][0].thumbnail,
-            path: '/pages/home/index?ref=share'
+            path: '/pages/home/index?ref=share',
+            templateId: 'h3cc879h25gb8d7815'
         };
     }
 });

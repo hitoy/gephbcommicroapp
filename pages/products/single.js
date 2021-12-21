@@ -97,6 +97,7 @@ Page({
             desc: _this.data.descriptioin,
             imageUrl: _this.data.thumbnail,
             path: '/pages/products/single?id=' + this.data.id + '&ref=share',
+            templateId: 'h3cc879h25gb8d7815',
             success: function(){
                 Request.request(ajaxurl, {
                     action: 'addshare',

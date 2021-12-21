@@ -8,7 +8,7 @@ Page({
         business: '',
     },
     checkboxChange(e){
-         this.setData({
+        this.setData({
             business: e.detail.value.join(', '),
         });
     },
@@ -22,6 +22,8 @@ Page({
             title: '正在提交...',
             mask: true
         });
+
+        let referer = this.data.referer;
         Request.post(app.globalData.feedbackurl, value).then(function(data) {
             let result = JSON.parse(data);
             tt.hideLoading();
@@ -29,6 +31,17 @@ Page({
                 icon: 'none',
                 title: result.message
             });
+
+            //记录表单转化
+            if(result.code == 200){
+                tt.sendtoTAQ({
+                    event_type: 'form',
+                    extra: {
+                        assets_id: '1716815542574091',
+                        page: referer,
+                    },
+                });
+            }
         });
     },
 
@@ -40,6 +53,14 @@ Page({
             id: referer.options.id,
             referer: referer.route + query
         });
-    }
 
+        //访问目标页面
+        tt.sendtoTAQ({
+            event_type: 'page_view',
+            extra: {
+                assets_id: '1716815542574091',
+                page: '/pages/about/inquiry',
+            },
+        });
+    }
 });

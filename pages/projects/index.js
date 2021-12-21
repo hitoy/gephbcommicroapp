@@ -112,7 +112,8 @@ Page({
             title: _this.data.title,
             desc: _this.data.description,
             imageUrl: _this.data.thumbnail,
-            path: '/pages/projects/index?ref=share'
+            path: '/pages/projects/index?ref=share',
+            templateId: 'h3cc879h25gb8d7815'
         };
     }
 });
